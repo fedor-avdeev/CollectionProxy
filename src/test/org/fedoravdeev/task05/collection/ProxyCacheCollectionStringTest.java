@@ -38,7 +38,9 @@ public class ProxyCacheCollectionStringTest {
 		"\"r\" - 1\n" +
 		"\"d\" - 1\n" +
 		"\"!\" - 1\n");
-		verify(storeCollectionString, atLeastOnce()).getString("hello world!");
+		
+		verify(proxyCacheCollectionString, atLeastOnce()).getString("hello world!");
+		
 		//verify(proxyCacheCollectionString).callMethod(Matchers.eq(concrete_object));
 		//InOrder inOrder = Mockito.inOrder(storeCollectionString);
 		//inOrder.verify(storeCollectionString).getString("hello world!");
